@@ -39,7 +39,7 @@ const Employee = require("../models/employee");
  *       '501':
  *         description: MongoDB exception
  */
-// API to find one employee by ID
+// API to find one employee by ID this will concatinate to the app.use("/api/employees", EmployeeApi) we specify in index.js
 router.get("/:empId", async (req, res) => {
   try {
     // finds the employee by employee ID, or returns an error message

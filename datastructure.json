@@ -1,0 +1,23 @@
+{
+  "Employee": {
+    "empId": 1007,
+    "firstName": "Detres",
+    "lastName": "JR",
+    "todo": [
+      {
+        "id": 100,
+        "task": "Create Ui/UX"
+      },
+      {
+        "id": 002,
+        "task": "Fix database"
+      }
+    ],
+    "done": [
+      {
+        "id": 100,
+        "task": "Create Ui/UX"
+      }
+    ]
+  }
+}
