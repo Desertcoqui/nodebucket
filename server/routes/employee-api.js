@@ -40,7 +40,7 @@ const Employee = require("../models/employee");
  *         description: MongoDB exception
  */
 // API to find one employee by ID
-router.get("/employees/empId", async (req, res) => {
+router.get("/:empId", async (req, res) => {
   try {
     // finds the employee by employee ID, or returns an error message
     Employee.findOne({ empId: req.params.empId }, function (err, employee) {

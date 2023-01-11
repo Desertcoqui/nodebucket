@@ -39,7 +39,7 @@ app.use("/", express.static(path.join(__dirname, "../dist/nodebucket")));
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(openapiSpecification));
 // API imports
 
-app.use("/api", EmployeeApi);
+app.use("/api/employees", EmployeeApi);
 // default server port value.
 const PORT = process.env.PORT || 3000;
 
