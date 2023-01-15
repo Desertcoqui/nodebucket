@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
 
   // adds validators to the loginForm. Ensures that only numerical values are accepted.
   loginForm: FormGroup = this.fb.group({
-    employeeId: [null, Validators.compose([Validators.required, Validators.pattern("^[0-9]*$")])],
+    empId: [null, Validators.compose([Validators.required, Validators.pattern("^[0-9]*$")])],
   });
 
   constructor(
