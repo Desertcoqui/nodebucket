@@ -11,14 +11,14 @@ const Schema = mongoose.Schema;
 
 //variable which will create employee Schemas with three objects, employee id, first name and lastname
 let employeeSchema = new Schema(
-    {
-      //empID in MongoDB Atlas using Int64 data type
+  {
+    //empID in MongoDB Atlas using Int64 data type
     empId: { type: Number, unique: true, required: true },
     firstName: { type: String },
     lastName: { type: String },
   },
-    {
-      //will search collection employees in mongoDB database since we have manually created one. 
+  {
+    //will search collection employees in mongoDB database since we have manually created one.
     collection: "employees",
   }
 );

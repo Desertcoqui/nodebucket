@@ -1,24 +1,22 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponent } from './pages/home/home.component';
-import { AuthLayoutComponent } from './shared/auth-layout/auth-layout.component';
-import { BaseLayoutComponent } from './shared/base-layout/base-layout.component';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { HomeComponent } from "./pages/home/home.component";
+import { AuthLayoutComponent } from "./shared/auth-layout/auth-layout.component";
+import { BaseLayoutComponent } from "./shared/base-layout/base-layout.component";
+import { FlexLayoutModule } from "@angular/flex-layout";
+import { MatToolbarModule } from "@angular/material/toolbar";
+import { MatButtonModule } from "@angular/material/button";
+import { MatIconModule } from "@angular/material/icon";
+import { LoginComponent } from "./pages/login/login.component";
+import { HttpClientModule, HttpClient } from "@angular/common/http";
+import { CookieService } from "ngx-cookie-service";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    AuthLayoutComponent,
-    BaseLayoutComponent
-  ],
+  declarations: [AppComponent, HomeComponent, AuthLayoutComponent, BaseLayoutComponent, LoginComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -26,9 +24,10 @@ import { MatIconModule } from '@angular/material/icon';
     FlexLayoutModule,
     MatToolbarModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,0 +1,3 @@
+{
+  "dbConn": "mongodb+srv://admin:s3cret@cluster0.sybhi4g.mongodb.net/nodebucket?retryWrites=true&w=majority"
+}

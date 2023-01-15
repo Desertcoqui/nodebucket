@@ -15,6 +15,7 @@ const app = express();
 // swagger dependency imports
 const swaggerUi = require("swagger-ui-express");
 const swaggerJsdoc = require("swagger-jsdoc");
+const config = require("./data/config.json");
 
 // variable to use Open API specifications linked to router files
 const options = {
@@ -43,12 +44,16 @@ app.use("/api/employees", EmployeeApi);
 // default server port value.
 const PORT = process.env.PORT || 3000;
 
-// TODO: This line will be replaced with your database connection string (including username/password).
-const CONN = "mongodb+srv://admin:s3cret@cluster0.sybhi4g.mongodb.net/nodebucket?retryWrites=true&w=majority";
+// connection string coming from config.json
+const CONN = config.dbConn;
 
 /**
  * Database connection.
  */
+
+//error message handling for future mongoose app version
+mongoose.set("strictQuery", false);
+
 mongoose
   .connect(CONN)
   .then(() => {
