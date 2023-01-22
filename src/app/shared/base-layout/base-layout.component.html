@@ -17,12 +17,12 @@ https://www.google.com/books/edition/Getting_MEAN_with_Mongo_Express_Angular/sTg
         <!-- logo -->
         <button class="logo" routerLink="/" mat-button>nodebucket</button>
 
-        <button class="navbar-link" mat-button>About</button>
-        <button class="navbar-link" mat-button>Contact Us</button>
+        <button class="navbar-link" routerLink="/about" mat-button>About</button>
+        <button class="navbar-link" routerLink="/contact" mat-button>Contact Us</button>
       </div>
       <div fxFlex>
         <button (click)="logout()">
-          LogOut From the NodeBucket App
+          Logout
         </button>
       </div>
     </mat-toolbar>

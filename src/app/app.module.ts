@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { HomeComponent } from "./pages/home/home.component";
 import { AuthLayoutComponent } from "./shared/auth-layout/auth-layout.component";
 import { BaseLayoutComponent } from "./shared/base-layout/base-layout.component";
+
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatButtonModule } from "@angular/material/button";
@@ -22,17 +23,31 @@ import { MatIconModule } from "@angular/material/icon";
 import { LoginComponent } from "./pages/login/login.component";
 import { HttpClientModule, HttpClient } from "@angular/common/http";
 import { CookieService } from "ngx-cookie-service";
+
+import { MatDividerModule } from "@angular/material/divider";
 import { MessagesModule } from "primeng/messages";
 import { MessageModule } from "primeng/message";
 import { MatMenuModule } from "@angular/material/menu";
-import { MatDividerModule } from "@angular/material/divider";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatCardModule } from "@angular/material/card";
 import { MatInputModule } from "@angular/material/input";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-
+import { ContactComponent } from "./pages/contact/contact.component";
+import { RouterModule } from "@angular/router";
+import { MatSelectModule } from "@angular/material/select";
+import { MatDialogModule } from "@angular/material/dialog";
+import { DragDropModule } from "@angular/cdk/drag-drop";
+//Components
 @NgModule({
-  declarations: [AppComponent, HomeComponent, AuthLayoutComponent, BaseLayoutComponent, LoginComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    AuthLayoutComponent,
+    BaseLayoutComponent,
+    LoginComponent,
+    ContactComponent,
+  ],
+  //Imported Modules
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -51,6 +66,10 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
+    RouterModule,
+    MatSelectModule,
+    MatDialogModule,
+    DragDropModule,
   ],
   providers: [CookieService],
   bootstrap: [AppComponent],

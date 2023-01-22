@@ -13,6 +13,7 @@ import { HomeComponent } from "./pages/home/home.component";
 import { AuthGuard } from "./auth.guard";
 import { AuthLayoutComponent } from "./shared/auth-layout/auth-layout.component";
 import { LoginComponent } from "./pages/login/login.component";
+import { ContactComponent } from "./pages/contact/contact.component";
 
 //Routes for the auth/ base layout
 const routes: Routes = [
@@ -23,6 +24,11 @@ const routes: Routes = [
       {
         path: "",
         component: HomeComponent,
+        canActivate: [AuthGuard],
+      },
+      {
+        path: "contact",
+        component: ContactComponent,
         canActivate: [AuthGuard],
       },
     ],

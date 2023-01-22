@@ -3,14 +3,11 @@
 // Date: Jan 15 2023
 // Modified By: Ferdinand Detres Jr
 // Attributions: https://www.section.io/engineering-education/nodejs-mongoosejs-mongodb/
+// https://vegibit.com/how-to-use-an-interface-in-angular/
 // In-Class tutorials
 
-import { Item } from "./item.interface";
-//employee interface with three objects
-export interface Employee {
-  empId: number;
-  firstName: string;
-  lastName: string;
-  todo: Item[];
-  done: Item[];
+//imports and sets the item interface
+export interface Item {
+  _id: string;
+  text: string;
 }
