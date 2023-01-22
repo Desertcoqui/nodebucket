@@ -1,6 +1,6 @@
 // Title: NodeBucket
 // Author: Professor Krasso
-// Date: Jan 11 2023
+// Date: Jan 22 2023
 // Modified By: Ferdinand Detres Jr
 // Attributions: https://www.section.io/engineering-education/nodejs-mongoosejs-mongodb/
 // In-Class tutorials
@@ -16,6 +16,8 @@ let employeeSchema = new Schema(
     empId: { type: Number, unique: true, required: true },
     firstName: { type: String },
     lastName: { type: String },
+    todo: [itemSchema],
+    done: [itemSchema],
   },
   {
     //will search collection employees in mongoDB database since we have manually created one.
