@@ -13,5 +13,5 @@ let itemSchema = new Schema({
   text: { type: String },
 });
 
-// this exports the schema
+// this exports the schema so we can use it in th employee.js model
 module.exports = itemSchema;

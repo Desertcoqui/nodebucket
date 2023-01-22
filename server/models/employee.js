@@ -8,6 +8,7 @@
 //using mongoose dependency and mongoose object Schema this makes up the Mongoose Model
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+const itemSchema = require("./item");
 
 //variable which will create employee Schemas with three objects, employee id, first name and lastname
 let employeeSchema = new Schema(

@@ -15,7 +15,7 @@ const Employee = require("../models/employee");
 // Swagger written in YAML code to describe the findEmployeeById API
 /**
  * findEmployeeById
- * @swagger
+ * @openapi
  * /api/employees/{empId}:
  *   get:
  *     tags:
@@ -63,7 +63,7 @@ router.get("/:empId", async (req, res) => {
 });
 /**
  * findAllTasks
- * @swagger
+ * @openapi
  * /api/employees/{empId}/tasks:
  *   get:
  *     tags:
@@ -105,14 +105,14 @@ router.get("/:empId/tasks", async (req, res) => {
   } catch (e) {
     console.log(e);
     res.status(500).send({
-      err: "Internal server error: " + err.message,
+      err: "Internal server error: " + e.message,
     });
   }
 });
 /**
  * createTask
- * @swagger
- * /api/employees/{employeeId}/tasks:
+ * @openapi
+ * /api/employees/{empId}/tasks:
  *   post:
  *     tags:
  *       - Employees
@@ -158,7 +158,7 @@ router.post("/:empId/tasks", async (req, res) => {
           err: "MongoDB server error: " + err.message,
         });
       } else {
-        console.log(empId);
+        console.log(emp);
         const newTask = {
           text: req.body.text,
         };
@@ -181,7 +181,7 @@ router.post("/:empId/tasks", async (req, res) => {
   } catch (e) {
     console.log(e);
     res.status(500).send({
-      err: "Internal server error: " + err.message,
+      err: "Internal server error: " + e.message,
     });
   }
 });
