@@ -37,6 +37,8 @@ import { RouterModule } from "@angular/router";
 import { MatSelectModule } from "@angular/material/select";
 import { MatDialogModule } from "@angular/material/dialog";
 import { DragDropModule } from "@angular/cdk/drag-drop";
+import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { AboutComponent } from './pages/about/about.component';
 //Components
 @NgModule({
   declarations: [
@@ -46,6 +48,8 @@ import { DragDropModule } from "@angular/cdk/drag-drop";
     BaseLayoutComponent,
     LoginComponent,
     ContactComponent,
+    NotFoundComponent,
+    AboutComponent,
   ],
   //Imported Modules
   imports: [
