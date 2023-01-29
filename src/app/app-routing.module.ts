@@ -14,6 +14,8 @@ import { AuthGuard } from "./auth.guard";
 import { AuthLayoutComponent } from "./shared/auth-layout/auth-layout.component";
 import { LoginComponent } from "./pages/login/login.component";
 import { ContactComponent } from "./pages/contact/contact.component";
+import { AboutComponent } from "./pages/about/about.component";
+import { NotFoundComponent } from "./pages/not-found/not-found.component";
 
 //Routes for the auth/ base layout
 const routes: Routes = [
@@ -31,6 +33,11 @@ const routes: Routes = [
         component: ContactComponent,
         canActivate: [AuthGuard],
       },
+      {
+        path: "about",
+        component: AboutComponent,
+        canActivate: [AuthGuard],
+      },
     ],
   },
   {
@@ -41,7 +48,16 @@ const routes: Routes = [
         path: "login",
         component: LoginComponent,
       },
+      {
+        path: "not-found",
+        component: NotFoundComponent,
+        canActivate: [AuthGuard],
+      },
     ],
+  },
+  {
+    path: "**",
+    redirectTo: "session/not-found",
   },
 ];
 

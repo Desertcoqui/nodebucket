@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { HomeComponent } from "./pages/home/home.component";
 import { AuthLayoutComponent } from "./shared/auth-layout/auth-layout.component";
 import { BaseLayoutComponent } from "./shared/base-layout/base-layout.component";
+import { CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { MatToolbarModule } from "@angular/material/toolbar";
@@ -37,8 +38,9 @@ import { RouterModule } from "@angular/router";
 import { MatSelectModule } from "@angular/material/select";
 import { MatDialogModule } from "@angular/material/dialog";
 import { DragDropModule } from "@angular/cdk/drag-drop";
-import { NotFoundComponent } from './pages/not-found/not-found.component';
-import { AboutComponent } from './pages/about/about.component';
+import { NotFoundComponent } from "./pages/not-found/not-found.component";
+import { AboutComponent } from "./pages/about/about.component";
+import { ConfirmDialogComponent } from "./shared/confirm-dialog/confirm-dialog.component";
 //Components
 @NgModule({
   declarations: [
@@ -50,6 +52,7 @@ import { AboutComponent } from './pages/about/about.component';
     ContactComponent,
     NotFoundComponent,
     AboutComponent,
+    ConfirmDialogComponent,
   ],
   //Imported Modules
   imports: [
@@ -77,5 +80,6 @@ import { AboutComponent } from './pages/about/about.component';
   ],
   providers: [CookieService],
   bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule {}
