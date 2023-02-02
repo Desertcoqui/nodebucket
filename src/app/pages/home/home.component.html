@@ -9,15 +9,15 @@ https://material.angular.io/cdk/drag-drop/overview
 https://material.angular.io/cdk/drag-drop/overview
 // In-Class tutorials -->
 
-<div fxLayout="row" class="main-welcome">
+<div class="main-welcome">
   <h1 class="title">
     Welcome to - NodeBucket<br /> <strong>{{empId}}</strong>
   </h1>
 </div>
 <br>
 <!-- create task wrapper-->
-<div fxFlex>
-  <div class="task-container mat-elevation-z4" fxLayout="row">
+<div>
+  <div class="task-container">
     <mat-card>
       <!-- add task form group -->
       <form [formGroup]="taskForm" (ngSubmit)="createTask(); taskForm.reset()">
@@ -58,14 +58,9 @@ https://material.angular.io/cdk/drag-drop/overview
     </mat-card>
   </div>
 </div>
-<br>
-<br>
-<br>
-<br>
 
-
-<div fxFlex>
-  <div fxLayout="row" fxLayoutGap="15px" class="task-container" style="margin-top: 10px;">
+<div>
+  <div fxLayout="row" fxLayoutGap="15px" class="task-container" style="margin-top: 10%;">
     <!-- first row -->
     <div fxFlex>
       <mat-card class="mat-elevation-z0">

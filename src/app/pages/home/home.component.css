@@ -20,7 +20,8 @@ background .main-welcome {
 }
 
 .task-container {
-  width: 50%;
+  min-width: 300px;
+  max-width: 300px;
   margin: 0 auto;
 }
 
@@ -41,5 +42,8 @@ background .main-welcome {
   font-size: 14px;
   box-sizing: border-box;
   justify-content: space-between;
+  align-items: center;
+}
+.main-welcome {
   align-items: center;
 }
