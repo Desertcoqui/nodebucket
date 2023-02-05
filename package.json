@@ -11,7 +11,10 @@
     "dev": "ng build && nodemon ./server/index.js",
     "render-deploy": "ng build --configuration=production"
   },
-  "private": true,
+  "bin": {
+    "execute": "index.js"
+  },
+  "private": false,
   "dependencies": {
     "@angular/animations": "^14.0.0",
     "@angular/cdk": "^14.1.1",
