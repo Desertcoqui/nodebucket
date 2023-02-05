@@ -101,7 +101,7 @@ body:before {
 }
 
 .info:before {
-  content: "file not found";
+  content: "internal<br> server error";
   font-family: OCR-A;
   font-size: 100px;
   text-align: center;
